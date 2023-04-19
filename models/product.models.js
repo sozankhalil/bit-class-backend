@@ -14,7 +14,8 @@ address:{
     houseNumber:Number,
 },
 contact:Map,
-
+    user: { type: mongoose.Types.ObjectId, ref: "User" },
+    category: { type: mongoose.Types.ObjectId, ref: "category" },
 });
 
 const Product =mongoose.model('Product',productSchema);
