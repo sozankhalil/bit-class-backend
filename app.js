@@ -6,7 +6,7 @@ import { trimQueryMiddleware } from "./middlewares/trimQuery.middleware.js";
 import productsRoutes from "./routes/products.routes.js";
 import categoriesRoute from './routes/category.routes.js';
 import usersRoute from './routes/users.routes.js'
-
+import './strategy/auth.js'
 import dotenv from "dotenv";
 dotenv.config();
 

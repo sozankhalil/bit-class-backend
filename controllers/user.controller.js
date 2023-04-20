@@ -2,10 +2,10 @@ import Users from "../models/users.model.js";
 import Product from "../models/product.models.js";
 import Categories from "../models/categories.model.js";
 
-export const signup = async (req,res)=>{
+export const signup = async (req, res) => {
     try {
         res.json({
-            status: 'success', data: req.Users,
+            status: 'success', data: req.user,
         })
     } catch (error) {
         console.log(error)
