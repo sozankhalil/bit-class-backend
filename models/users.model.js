@@ -2,10 +2,11 @@ import mongoose from "mongoose";
 import bcrypt from 'bcrypt'
 
 const userSchema = new mongoose.Schema({
-    username: { type: String, required: true, minlength: 8 },
-    email: { type: String },
+    username: { type: String, required: true, unique: true, minlength: 8 },
+    email: { type: String,  },
     phoneNumber: { type: Number },
     password: { type: String, required: true, minlength: 8 },
+    role: { type: String, default: 'customer' },
 
     products: [{ type: mongoose.Types.ObjectId, ref: 'Product' }],
     category: { type: mongoose.Types.ObjectId, ref: "category" }
